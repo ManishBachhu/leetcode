@@ -5,3 +5,4 @@
 - [Design Bounded Blocking Queue](https://leetcode.com/problems/design-bounded-blocking-queue/) : Real-world application of concurrency concepts.
 - [Print Zero Even Odd](https://leetcode.com/problems/print-zero-even-odd/) - Concurrency based problem. Wrote explanation with an elegant solution [here](https://leetcode.com/problems/print-zero-even-odd/solutions/5790659/c-beats-100-elegant-solution-with-only-1-mutex-counter);
 - [Reverse Bits](leetcode.com/problems/reverse-bits/) : Solving question without loop is tricky.
+- [Find Peak Element](https://leetcode.com/problems/find-peak-element/) : Reinforces the idea that binary search means cutting the search space by half.
