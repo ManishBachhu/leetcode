@@ -1,34 +1,19 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
+// DP Bottom up
+// Time Complexity : O(N^2), Space Complexity : O(N)
 class Solution {
 public:
-    void dfs(TreeNode* node, int currNum, int& ans) {
-        if (node == nullptr) {
-            return;
-        }
-        currNum = currNum*10 + node->val;
+    int minimumTotal(vector<vector<int>>& triangle) {
+        int N = triangle.size();
+        vector<int> currRow = triangle[N - 1];
 
-        // if leaf node, populate vector with number by iterating the deque
-        if (node->left == nullptr && node->right == nullptr) {
-            ans += currNum;
+        for(int i = N - 2; i >= 0; i--) {
+            vector<int> prevRow = currRow;
+            currRow.resize(i + 1);
+            for(int j = 0; j <= i; j++) {
+                currRow[j] = min(prevRow[j], prevRow[j + 1]) + triangle[i][j];
+            }
         }
-        dfs(node->left, currNum, ans);
-        dfs(node->right, currNum, ans);
-    }
 
-    int sumNumbers(TreeNode* root) {
-        // populate nums with root-leaf nums
-        int ans  = 0;
-        dfs(root, 0, ans);
-        return ans;
+        return currRow[0];
     }
 };
