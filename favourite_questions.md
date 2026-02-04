@@ -7,3 +7,4 @@
 - [Reverse Bits](leetcode.com/problems/reverse-bits/) : Solving question without loop is tricky.
 - [Find Peak Element](https://leetcode.com/problems/find-peak-element/) : Reinforces the idea that binary search means cutting the search space by half.
 - [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/description/) : DP on graph - Belman ford algorithm.
+- [Final Prices With a Special Discount in a Shop](leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/description/): Good starter problem, need to intuitively grasp stack solution - [Solution](https://github.com/ManishBachhu/leetcode/blob/main/1475.cpp)
