@@ -1,7 +1,7 @@
 class Solution {
 public:
-    int maxProfit(vector<int>& prices) {
-        int n = prices.size(), k = 2; // num of transactions;
+    int maxProfit(int k, vector<int>& prices) {
+        int n = prices.size();
         vector<int> costs(k + 1, INT_MAX), profits(k + 1, 0);
 
         for(int i = 0; i < n; i++) {
